@@ -7,9 +7,8 @@
         mc:Ignorable="d"
         Title="PageAdmin" Height="450" Width="800">
     <Grid>
-           <Rectangle Fill="#77b5fe" HorizontalAlignment="Left" Height="409" Margin="0,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="798"/>
+        <Rectangle Fill="#77b5fe" HorizontalAlignment="Left" Height="409" Margin="0,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="798"/>
         <Rectangle Fill="#1e366d" HorizontalAlignment="Left" Height="41" Stroke="Black" VerticalAlignment="Top" Width="800"/>
-
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="11" Margin="114,273,0,0" Stroke="Black" VerticalAlignment="Top" Width="544"/>
         <Label Content="bonjour mr x " HorizontalAlignment="Left" Margin="26,36,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
         <Label Content="guid :  " HorizontalAlignment="Left" Margin="26,67,0,0" VerticalAlignment="Top" Height="26" Width="46"/>
