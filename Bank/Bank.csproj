@@ -118,6 +118,7 @@
     <Compile Include="CreationCompteAdmin.xaml.cs">
       <DependentUpon>CreationCompteAdmin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Entity\Admin.cs" />
     <Compile Include="Exchangerate.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

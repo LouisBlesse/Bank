@@ -24,5 +24,25 @@ namespace Bank
                 throw;
             }    
         }
+        
+        private void Button_Click_Admin(object sender, RoutedEventArgs e)
+        {
+        try
+        {
+            MainWindow.Co_Admin(AdminName.Text, AdminMdp.Text);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                throw;
+            }
+        }
+
+        private void Button_Click_NewAdmin(object sender, RoutedEventArgs e)
+        {
+            CreationCompteAdmin p = new CreationCompteAdmin(); 
+            p.Show();
+        }
     }
 }

@@ -9,6 +9,12 @@ namespace Bank
         {
             InitializeComponent();
         }
+
+        public void Button_Click_Create(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Create_Admin(pseudo.Text,mdp.Text);
+            this.Close();
+        }
     }
 }
 
