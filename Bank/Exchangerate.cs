@@ -16,11 +16,12 @@ namespace Bank
             client = new HttpClient();
         }
         
-        public async Task<string> Connect()
+        public async Task<string> Connect(string currencyInitial, string currencyToConvert, int amount)
         {
             string res =
                 await client.GetStringAsync(
-                    "https://v6.exchangerate-api.com/v6/21408f48185cf792dba37191/pair/EUR/GBP/50000");
+                    "https://v6.exchangerate-api.com/v6/21408f48185cf792dba37191/pair/" + currencyInitial +  "/"+currencyToConvert + "/"+amount.ToString()
+                    );
             return res;
         }
         
@@ -50,6 +51,7 @@ namespace Bank
             RootRoot myDeserializedClass = JsonConvert.DeserializeObject<RootRoot>(json); 
             return myDeserializedClass;
         }
+        
         public class Root
         {
             public string result { get; set; }
