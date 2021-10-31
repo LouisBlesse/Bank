@@ -80,13 +80,11 @@ namespace Bank
     public static void Create_Admin(string identifiant, string password)
     {
       SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
-      SQL.Open();//TODO Creat JSon file and get the value from it
-      
+
       SQLiteCommand command = SQL.CreateCommand();
       command.CommandText = "INSERT INTO admin (identifiant, password) values ('"+identifiant+"', '"+password+"')";
       command.ExecuteNonQuery();
       
-      //TODO Give the vale to the jason file
       SQL.Close();
     }
   }
