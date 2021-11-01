@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using Bank.Entity;
 
 namespace Bank
 {
@@ -12,10 +13,13 @@ namespace Bank
     {
        // private static Task<Exchangerate.Root> AllData;
         private static Task<Exchangerate.RootRoot> AllCurrency;
+        private User MyUser;
  
-         public PageClient()
+         public PageClient(User MyUser)
          {
+             this.MyUser = MyUser;
              InitializeComponent();
+             Hello.Content = "Bonjour Monsieur " + MyUser.last_name;
          //   PageClient.AllData = Initialize();
             PageClient.AllCurrency = InitializeCurrency();
          }
@@ -41,7 +45,7 @@ namespace Bank
             return tmp.ToString();
         }
          
-         private async Task<Exchangerate.RootRoot> InitializeCurrency()
+         public async Task<Exchangerate.RootRoot> InitializeCurrency()
         { 
                 Exchangerate Lune = new Exchangerate();
                 string mavariable = await Lune.ConnectGetAllCurency();

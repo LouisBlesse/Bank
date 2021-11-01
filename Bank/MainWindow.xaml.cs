@@ -74,7 +74,6 @@ namespace Bank
         MessageBox.Show(e.ToString());
         throw;
       }
-      
     }
 
     public static void Create_Admin(string identifiant, string password)
@@ -84,6 +83,55 @@ namespace Bank
 
       SQLiteCommand command = SQL.CreateCommand();
       command.CommandText = "INSERT INTO admin (identifiant, password) values ('"+identifiant+"', '"+password+"')";
+      command.ExecuteNonQuery();
+      
+      SQL.Close();
+    }
+    
+    
+    public static void Co_User(string UserLastName, string pin)
+    {
+      //Connection de l'user
+      try
+      {
+        SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+        SQL.Open();
+        
+        SQLiteCommand commandSelect = SQL.CreateCommand();
+        commandSelect.CommandText = "select * from client where last_name='"+ UserLastName + "'and  pin ='"+ pin +"'";
+
+
+        SQLiteDataReader reader = commandSelect.ExecuteReader();
+        while (reader.Read())
+        {
+          User MyUser = new User(reader["id"].ToString() , reader["block"].ToString(),
+            reader["first_name"].ToString(),
+            reader["last_name"].ToString(),
+            reader["pin"].ToString(),
+            reader["main_currency"].ToString());// Create the Admin 
+        
+          PageClient p = new PageClient(MyUser); //New page admin
+          p.Show();
+        }
+        SQL.Close();
+      }
+      catch (Exception e)
+      {
+        MessageBox.Show(e.ToString());
+        throw;
+      }
+    }
+    
+    public static void Create_User(string first_name, string last_name,string pin, string main_currency)
+    {
+      string id = Guid.NewGuid().ToString();
+      bool block = false;
+      
+      SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+      SQL.Open();
+
+      SQLiteCommand command = SQL.CreateCommand();
+      command.CommandText = "INSERT INTO client (id, block, first_name, last_name, pin, main_currency) values ('"+id+"', "+block+",'"+first_name+"','"+last_name+"',"+Int32.Parse(pin)+",'"+main_currency+"')";
       command.ExecuteNonQuery();
       
       SQL.Close();

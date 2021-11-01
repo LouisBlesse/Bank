@@ -15,8 +15,7 @@ namespace Bank
           
             try
             { 
-                PageClient p = new PageClient( );
-                p.Show();
+                MainWindow.Co_User(UserLastName.Text, UserMdp.Text);
             }
             catch (Exception ex)
             {
