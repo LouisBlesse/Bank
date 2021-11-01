@@ -80,6 +80,7 @@ namespace Bank
     public static void Create_Admin(string identifiant, string password)
     {
       SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+      SQL.Open();
 
       SQLiteCommand command = SQL.CreateCommand();
       command.CommandText = "INSERT INTO admin (identifiant, password) values ('"+identifiant+"', '"+password+"')";
