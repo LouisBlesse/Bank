@@ -23,14 +23,15 @@ namespace Bank
          //   PageClient.AllData = Initialize();
             PageClient.AllCurrency = InitializeCurrency();
          }
+         //function conversion
+
          private async void Initialize()
         {
             Exchangerate Lune = new Exchangerate();
             string a = ComboBoxtest.SelectedValue.ToString(), b = currencyRight.SelectedValue.ToString();
             int c = Int32.Parse(State_Copy1.Text);
             string test  = await Lune.Connect(a,b,c);
-            State_Copy2.Text  =  Lune.transfert(test).conversion_result.ToString();
-            
+            State_Copy2.Text = Lune.transfert(test).conversion_result.ToString();
         }
          
          public async Task<Exchangerate.RootRoot> InitializeCurrency()
