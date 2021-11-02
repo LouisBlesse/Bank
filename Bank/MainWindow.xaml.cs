@@ -37,6 +37,7 @@ namespace Bank
       { 
         Menu p = new Menu();
         p.Show();
+        Close();
       }
       catch (Exception ex)
       {
@@ -124,6 +125,7 @@ namespace Bank
     
     public static void Create_User(string first_name, string last_name,string pin, string main_currency)
     {
+      
       string id = Guid.NewGuid().ToString();
       bool block = false;
       
@@ -135,6 +137,24 @@ namespace Bank
       command.ExecuteNonQuery();
       
       SQL.Close();
+      
     }
+    
+ /*   public static void delete(string first_name, string last_name)
+    {
+      
+      string id = Guid.NewGuid().ToString();
+      bool block = false;
+      
+      SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+      SQL.Open();
+
+      SQLiteCommand command = SQL.CreateCommand();
+      command.CommandText = "INSERT INTO client (id, block, first_name, last_name, pin, main_currency) values ('"+id+"', "+block+",'"+first_name+"','"+last_name+"',"+Int32.Parse(pin)+",'"+main_currency+"')";
+      command.ExecuteNonQuery();
+      
+      SQL.Close();
+      
+    }*/
   }
 }

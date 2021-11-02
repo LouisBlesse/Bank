@@ -26,7 +26,7 @@
         <TextBox Name="State_Copy2" Text="State" HorizontalAlignment="Left"  Height="160" Margin="478,396,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="126"   RenderTransformOrigin="0.695,-0.214"/>
         <Label Content="conversion" HorizontalAlignment="Left" Margin="26,320,0,0" VerticalAlignment="Top"/>
         <ComboBox Name="currencyHigh" HorizontalAlignment="Left" Margin="385,59,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Deconnexion" HorizontalAlignment="Left" Height="27" Margin="703,9,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="-0.083,0.522"/>
+        <Button Click="deconnexion" Content="Deconnexion" HorizontalAlignment="Left" Height="27" Margin="703,9,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="-0.083,0.522"/>
         <Button Content="change 
 pin" HorizontalAlignment="Left" Height="20" Margin="711,96,0,0" VerticalAlignment="Top" Width="69" RenderTransformOrigin="-0.083,0.522"  />
         <TextBox Name="State_Copy3" HorizontalAlignment="Left" Height="24" Margin="703,60,0,0" Text="State" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"   RenderTransformOrigin="0.695,-0.214"/>

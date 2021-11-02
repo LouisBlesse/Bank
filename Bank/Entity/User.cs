@@ -6,7 +6,6 @@ namespace Bank.Entity
     {
         public User(string id,string block, string first_name, string last_name,string pin, string main_currency)
         {
-
             this.id = id;
             this.block = block;
             this.first_name = first_name;

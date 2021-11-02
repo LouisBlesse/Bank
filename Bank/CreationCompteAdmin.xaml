@@ -6,14 +6,16 @@
         xmlns:local="clr-namespace:Bank"
         mc:Ignorable="d"
         Title="CreationCompteAdmin" Height="450" Width="800">
+
     <Grid>
-        <Rectangle Fill="#77b5fe" HorizontalAlignment="Left" Height="409" Margin="0,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="798"/>
-        <Rectangle Fill="#1e366d" HorizontalAlignment="Left" Height="41" Stroke="Black" VerticalAlignment="Top" Width="800"/>
+        <Rectangle Fill="#181C36" HorizontalAlignment="Left" Height="409" Margin="0,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="798"/>
+        <Rectangle Fill="#2E3349" HorizontalAlignment="Left" Height="41" Stroke="Black" VerticalAlignment="Top" Width="800"/>
         <Label Content="admin" HorizontalAlignment="Left" Margin="368,72,0,0" VerticalAlignment="Top" Width="166" Height="30"/>
-        <TextBox x:Name="pseudo" HorizontalAlignment="Left" Height="47" Margin="309,123,0,0" Text="pseudo" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" />
-        <TextBox x:Name="mdp" HorizontalAlignment="Left" Height="47" Margin="309,212,0,0" Text="mdp" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
-        <Button Content="création de compte" Click="Button_Click_Create" HorizontalAlignment="Left" Height="44" Margin="328,285,0,0" VerticalAlignment="Top" Width="144"/>
+        <TextBox x:Name="pseudo"  Background="#2E3349"  HorizontalAlignment="Left" Height="29" Margin="309,123,0,0" Text="pseudo" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" BorderBrush="#FF2E3349"   />
+        <TextBox x:Name="mdp"   Background="#FF2E3349"   HorizontalAlignment="Left" Height="29" Margin="309,192,0,0" Text="mdp" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" SelectionTextBrush="LightGray" IsEnabled="False"/>
+        <Button Name="salut" Background="#2E3349" Content="création de compte"   Click="Button_Click_Create" HorizontalAlignment="Left" Height="44" Margin="328,285,0,0" VerticalAlignment="Top" Width="144" BorderBrush="#FF2E3349" Foreground="White"/>
         <Label Content="chercher nom urgent !!!!" HorizontalAlignment="Left" Margin="347,10,0,0" VerticalAlignment="Top" Width="150" Foreground="White"/>
-        <Button Content="retour a la page de connnexion" HorizontalAlignment="Left" Height="29" Margin="621,7,0,0" VerticalAlignment="Top" Width="169"/>
+        <Button Name="test" BorderBrush="#181C36"  Background="#181C36" Click="retour" Content="retour a la page de connnexion" HorizontalAlignment="Left" Height="29" Margin="616,7,0,0" VerticalAlignment="Top" Width="174" Foreground="White"/>
     </Grid>
 </Window>
+

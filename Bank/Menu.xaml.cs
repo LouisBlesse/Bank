@@ -12,10 +12,10 @@ namespace Bank
         
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-          
-            try
+          try
             { 
                 MainWindow.Co_User(UserLastName.Text, UserMdp.Text);
+                Close();
             }
             catch (Exception ex)
             {
@@ -29,8 +29,8 @@ namespace Bank
         try
         {
             MainWindow.Co_Admin(AdminName.Text, AdminMdp.Text);
-
-            }
+            Close();
+        }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());

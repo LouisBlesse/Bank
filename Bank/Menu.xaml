@@ -7,18 +7,20 @@
         mc:Ignorable="d"
         Title="Menu" Height="450" Width="800">
     <Grid>
-        <Rectangle Fill="#1e366d" HorizontalAlignment="Left" Height="41" Stroke="Black" VerticalAlignment="Top" Width="800"/>
-        <Rectangle Fill="#77b5fe" HorizontalAlignment="Left" Height="409" Margin="0,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="798"/>
-        <Button Content="nouveau compte admin" Click="Button_Click_NewAdmin" HorizontalAlignment="Left" Height="40" Margin="319,386,0,0" VerticalAlignment="Top" Width="178"/>
+        <Rectangle Fill="#2E3349" HorizontalAlignment="Left" Height="41" Stroke="Black" VerticalAlignment="Top" Width="800"/>
+        <Rectangle Fill="#181C36" HorizontalAlignment="Left" Height="384" Margin="-4,36,-0.4,0" Stroke="Black" VerticalAlignment="Top" Width="798"/>
+        <Button Content="nouveau compte admin" Click="Button_Click_NewAdmin" HorizontalAlignment="Left" Height="40" Margin="319,349,0,0" VerticalAlignment="Top" Width="178"/>
         <TextBox x:Name="AdminName" HorizontalAlignment="Left" Height="40" Margin="135,128,0,0" Text="admin name" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
         <Label Content="admin" HorizontalAlignment="Left" Margin="190,83,0,0" VerticalAlignment="Top" Width="110"/>
         <Label Content="client" HorizontalAlignment="Left" Margin="551,83,0,0" VerticalAlignment="Top" Width="110"/>
         <TextBox x:Name="AdminMdp" HorizontalAlignment="Left" Height="40" Margin="135,216,0,0" Text="mdp" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
         <TextBox x:Name="UserLastName" HorizontalAlignment="Left" Height="40" Margin="482,128,0,0" Text="user last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
         <TextBox x:Name="UserMdp" HorizontalAlignment="Left" Height="40" Margin="482,216,0,0" Text="mdp" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
-        <Button Content="connexion" Click="Button_Click_Admin" HorizontalAlignment="Left" Height="40" Margin="168,288,0,0" VerticalAlignment="Top" Width="112"/>
+        <Button  Content="connexion" Click="Button_Click_Admin" HorizontalAlignment="Left" Height="40" Margin="168,288,0,0" VerticalAlignment="Top" Width="112"/>
         <Button Content="Connexion" Click="Button_Click" HorizontalAlignment="Left" Height="40" Margin="519,288,0,0" VerticalAlignment="Top" Width="109"/>
-        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="261" Margin="394,83,0,0" Stroke="Black" VerticalAlignment="Top" Width="5"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="261" Margin="404,67,0,0" Stroke="Black" VerticalAlignment="Top" Width="5"/>
         <Label Content="chercher nom urgent !!!!" HorizontalAlignment="Left" Margin="347,10,0,0" VerticalAlignment="Top" Width="150" Foreground="White"/>
+        <Button Content="admin"  Margin="190,50,491.6,338"/>
+        <Button Content="client"  Margin="482,50,193.6,337"/>
     </Grid>
 </Window>

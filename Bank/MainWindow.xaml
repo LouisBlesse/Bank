@@ -6,12 +6,11 @@
         xmlns:local="clr-namespace:Bank"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800">
-    <Grid>
+ <Grid>
         <Button Content="Création de compte admin :" HorizontalAlignment="Left" Height="40" Margin="72,97,0,0" VerticalAlignment="Top" Width="162"/>
         <Button Content="Connexion à un compte admin :" HorizontalAlignment="Left" Height="40" Margin="72,202,0,0" VerticalAlignment="Top" Width="178"/>
         <Button Content="création de compte utilisateur :" HorizontalAlignment="Left" Height="40" Margin="72,334,0,0" VerticalAlignment="Top" Width="178"/>
         <Button Content="test" Click="Button_Click" HorizontalAlignment="Left" Height="40" Margin="72,334,0,0" VerticalAlignment="Top" Width="178"/>
-
         <TextBox Name="namecreate" HorizontalAlignment="Left" Height="40" Margin="282,97,0,0" Text="name" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
         <TextBox Name="nameAdmin" HorizontalAlignment="Left" Height="40" Margin="282,202,0,0" Text="name" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
         <TextBox Name="mdpcreate" HorizontalAlignment="Left" Height="40" Margin="503,97,0,0" Text="mdp" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
 using Bank.Entity;
 
 namespace Bank
@@ -43,6 +44,13 @@ namespace Bank
         {
             //User MyUser = new User(first_name.Text, last_name.Text, pin.Text, currencyHigh.SelectedValue.ToString());
             MainWindow.Create_User(first_name.Text, last_name.Text, pin.Text, currencyHigh.SelectedValue.ToString());
+        }
+
+        private void decoAdmin(object sender, RoutedEventArgs e)
+        {
+            Menu menu = new Menu();
+            Close();
+            menu.Show();
         }
     }
 }
