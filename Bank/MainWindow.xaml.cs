@@ -101,7 +101,6 @@ namespace Bank
         SQLiteCommand commandSelect = SQL.CreateCommand();
         commandSelect.CommandText = "select * from client where last_name='"+ UserLastName + "'and  pin ='"+ pin +"'";
 
-
         SQLiteDataReader reader = commandSelect.ExecuteReader();
         while (reader.Read())
         {
@@ -139,22 +138,41 @@ namespace Bank
       SQL.Close();
       
     }
-    
- /*   public static void delete(string first_name, string last_name)
+    public static User select_User(string UserLastName )
     {
-      
-      string id = Guid.NewGuid().ToString();
-      bool block = false;
-      
       SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
       SQL.Open();
-
       SQLiteCommand command = SQL.CreateCommand();
-      command.CommandText = "INSERT INTO client (id, block, first_name, last_name, pin, main_currency) values ('"+id+"', "+block+",'"+first_name+"','"+last_name+"',"+Int32.Parse(pin)+",'"+main_currency+"')";
-      command.ExecuteNonQuery();
+      command.CommandText = "select * from client where last_name=\""+ UserLastName+ "\"";
       
-      SQL.Close();
-      
-    }*/
+      SQLiteDataReader reader = command.ExecuteReader();
+      while (reader.Read())
+      {
+        User MyUser = new User(reader["id"].ToString() , reader["block"].ToString(),
+          reader["first_name"].ToString(),
+          reader["last_name"].ToString(),
+          reader["pin"].ToString(),
+          reader["main_currency"].ToString());// Create the Admin 
+        return MyUser;
+      }
+
+      return null;
+    }
+    /*   public static void delete(string first_name, string last_name)
+       {
+         
+         string id = Guid.NewGuid().ToString();
+         bool block = false;
+         
+         SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+         SQL.Open();
+   
+         SQLiteCommand command = SQL.CreateCommand();
+         command.CommandText = "INSERT INTO client (id, block, first_name, last_name, pin, main_currency) values ('"+id+"', "+block+",'"+first_name+"','"+last_name+"',"+Int32.Parse(pin)+",'"+main_currency+"')";
+         command.ExecuteNonQuery();
+         
+         SQL.Close();
+         
+       }*/
   }
 }

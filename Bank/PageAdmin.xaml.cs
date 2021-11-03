@@ -52,5 +52,22 @@ namespace Bank
             Close();
             menu.Show();
         }
+
+        private void showDataClient(object sender, RoutedEventArgs e)
+        {
+          User user =   MainWindow.select_User(nomClient.Text);
+          if (user != null)
+          {
+              statusClient.IsChecked = Convert.ToBoolean(user.block);
+              PinClient.Text = user.pin;
+          }
+          else
+          {
+              MessageBox.Show("il n'y pas de user " + nomClient.Text);
+          }
+
+
+
+        }
     }
 }

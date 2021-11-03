@@ -23,11 +23,11 @@
         <TextBox x:Name="State_Copy4" HorizontalAlignment="Left" Height="24" Margin="703,60,0,0" Text="State" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"  RenderTransformOrigin="0.695,-0.214"/>
         <Button Content="voire la liste de tous les utilisateurs" HorizontalAlignment="Left" Height="35" Margin="276,67,0,0" VerticalAlignment="Top" Width="216" RenderTransformOrigin="-0.083,0.522"/>
         <Label Content="gérer un client :" HorizontalAlignment="Left" Margin="45,313,0,0" VerticalAlignment="Top" Height="26" Width="118" RenderTransformOrigin="0.304,10.031"/>
-        <Button Content="block / unblock" HorizontalAlignment="Left" Height="35" Margin="267,352,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="-0.083,0.522"/>
+         <CheckBox Name="statusClient" Content="block"  HorizontalAlignment="Left" Margin="148,398,0,0" VerticalAlignment="Top" Width="120"/>
         <Button Content="delete client" HorizontalAlignment="Left" Height="35" Margin="612,352,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="-0.083,0.522" Background="#FFF49B9B"/>
         <Button Content="change  pin" HorizontalAlignment="Left" Height="20" Margin="442,375,0,0" VerticalAlignment="Top" Width="69" RenderTransformOrigin="-0.083,0.522"  />
-        <TextBox x:Name="State_Copy5" HorizontalAlignment="Left" Height="24" Margin="438,339,0,0" Text="State" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"   RenderTransformOrigin="0.695,-0.214"/>
-        <TextBox x:Name="State_Copy6" HorizontalAlignment="Left" Height="24" Margin="157,317,0,0" Text="guid client" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"  RenderTransformOrigin="0.695,-0.214"/>
-        <Button Content="vérifier transaction" HorizontalAlignment="Left" Height="35" Margin="64,360,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="-0.083,0.522"/>
+        <TextBox x:Name="PinClient" HorizontalAlignment="Left" Height="24" Margin="438,339,0,0" Text="pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"   RenderTransformOrigin="0.695,-0.214"/>
+        <TextBox x:Name="nomClient" HorizontalAlignment="Left" Height="24" Margin="157,317,0,0" Text="nom client" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"  RenderTransformOrigin="0.695,-0.214"/>
+        <Button Content="select" Click="showDataClient"  HorizontalAlignment="Left" Height="35" Margin="264,310,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="-0.083,0.522"/>
     </Grid>
 </Window>
