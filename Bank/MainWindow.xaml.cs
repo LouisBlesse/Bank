@@ -108,7 +108,8 @@ namespace Bank
             reader["first_name"].ToString(),
             reader["last_name"].ToString(),
             reader["pin"].ToString(),
-            reader["main_currency"].ToString());// Create the Admin 
+            reader["main_currency"].ToString(),
+            reader["user_try"].ToString());
         
           PageClient p = new PageClient(MyUser); //New page admin
           p.Show();
@@ -152,7 +153,8 @@ namespace Bank
           reader["first_name"].ToString(),
           reader["last_name"].ToString(),
           reader["pin"].ToString(),
-          reader["main_currency"].ToString());// Create the Admin 
+          reader["main_currency"].ToString(),
+        reader["user_try"].ToString());
         return MyUser;
       }
 

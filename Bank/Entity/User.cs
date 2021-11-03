@@ -4,7 +4,7 @@ namespace Bank.Entity
 {
     public class User
     {
-        public User(string id,string block, string first_name, string last_name,string pin, string main_currency)
+        public User(string id,string block, string first_name, string last_name,string pin, string main_currency, string user_try)
         {
             this.id = id;
             this.block = block;
@@ -12,6 +12,7 @@ namespace Bank.Entity
             this.last_name = last_name;
             this.pin = pin;
             this.main_currency = main_currency;
+            this.user_try = user_try;
         }
         
         
@@ -21,5 +22,6 @@ namespace Bank.Entity
         public string last_name;
         public string pin;
         public string main_currency;
+        public string user_try;
     }
 }
