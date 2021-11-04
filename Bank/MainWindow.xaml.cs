@@ -133,7 +133,7 @@ namespace Bank
       SQL.Open();
 
       SQLiteCommand command = SQL.CreateCommand();
-      command.CommandText = "INSERT INTO client (id, block, first_name, last_name, pin, main_currency) values ('"+id+"', "+block+",'"+first_name+"','"+last_name+"',"+Int32.Parse(pin)+",'"+main_currency+"')";
+      command.CommandText = "INSERT INTO client (id, block, first_name, last_name, pin, main_currency, user_try) values ('"+id+"', "+block+",'"+first_name+"','"+last_name+"',"+Int32.Parse(pin)+",'"+main_currency+"',0)";
       command.ExecuteNonQuery();
       
       SQL.Close();
