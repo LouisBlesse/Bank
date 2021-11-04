@@ -166,30 +166,32 @@ namespace Bank
       SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
       SQL.Open();
       SQLiteCommand command = SQL.CreateCommand();
-      // UPDATE table SET nom_colonne_1 = 'nouvelle valeur' WHERE condition
-    //  command.CommandText = "delete from client where last_name=\""+ UserLastName+ "\"";
       command.CommandText = "update client set pin=\""+ pin +"\" where last_name =\"" + UserLastName + "\""; 
-    //  command.CommandText = $"update client set pin=\"{pin}\" where last_name=\"{UserLastName}";
+      command.ExecuteNonQuery();
+      SQL.Close();
+    }
+
+    public static void updateAdmin(string password, string identifiant)
+    {
+      SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+      SQL.Open();
+      SQLiteCommand command = SQL.CreateCommand();
+      command.CommandText = "update admin set password=\""+ password +"\" where identifiant =\"" + identifiant + "\""; 
       command.ExecuteNonQuery();
       SQL.Close();
     }
     
     public static void delete(string UserLastName)
     {
-         
- 
-         
       SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
       SQL.Open();
    
       SQLiteCommand command = SQL.CreateCommand();
        
-
       command.CommandText = "delete from client where last_name=\""+ UserLastName+ "\"";
       command.ExecuteNonQuery();
-         
+
       SQL.Close();
-         
     }
   }
 }

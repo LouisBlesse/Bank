@@ -19,8 +19,8 @@
         <TextBox x:Name="pin" HorizontalAlignment="Left" Height="26" Margin="386,158,0,0" Text="pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"  RenderTransformOrigin="0.695,-0.214"/>
         <ComboBox Name="currencyHigh" HorizontalAlignment="Left" Margin="548,158,0,0" VerticalAlignment="Top" Width="120"/>
         <Button Click="decoAdmin" Content="Deconnexion" HorizontalAlignment="Left" Height="27" Margin="703,10,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="-0.083,0.522"/>
-        <Button Content="change  pin" HorizontalAlignment="Left" Height="20" Margin="711,96,0,0" VerticalAlignment="Top" Width="69" RenderTransformOrigin="-0.083,0.522"/>
-        <TextBox x:Name="State_Copy4" HorizontalAlignment="Left" Height="24" Margin="703,60,0,0" Text="State" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"  RenderTransformOrigin="0.695,-0.214"/>
+        <Button Content="changePin" Click="changePinAdmin" HorizontalAlignment="Left" Height="20" Margin="711,96,0,0" VerticalAlignment="Top" Width="69" RenderTransformOrigin="-0.083,0.522"/>
+        <TextBox x:Name="pinAdmin"  HorizontalAlignment="Left" Height="24" Margin="703,60,0,0" Text="State" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"  RenderTransformOrigin="0.695,-0.214"/>
         <Button Content="voire la liste de tous les utilisateurs" HorizontalAlignment="Left" Height="35" Margin="276,67,0,0" VerticalAlignment="Top" Width="216" RenderTransformOrigin="-0.083,0.522"/>
         <Label Content="gérer un client :" HorizontalAlignment="Left" Margin="45,313,0,0" VerticalAlignment="Top" Height="26" Width="118" RenderTransformOrigin="0.304,10.031"/>
          <CheckBox Name="statusClient" Content="block"  HorizontalAlignment="Left" Margin="148,398,0,0" VerticalAlignment="Top" Width="120"/>

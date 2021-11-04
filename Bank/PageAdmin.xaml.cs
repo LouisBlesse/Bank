@@ -77,5 +77,12 @@ namespace Bank
         {
             MainWindow.update(PinClient.Text, nomClient.Text);
         }
+
+        private void changePinAdmin(object sender, RoutedEventArgs e)
+        {
+ 
+           MainWindow.updateAdmin(pinAdmin.Text, MyAdmin.identifiant);
+
+        }
     }
 }
