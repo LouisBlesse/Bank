@@ -7,27 +7,27 @@
         mc:Ignorable="d"
         Title="PageAdmin" Height="450" Width="800">
     <Grid>
-        <Rectangle Fill="#77b5fe" HorizontalAlignment="Left" Height="409" Margin="0,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="798"/>
-        <Rectangle Fill="#1e366d" HorizontalAlignment="Left" Height="41" Stroke="Black" VerticalAlignment="Top" Width="800"/>
+        <Rectangle Fill="#181C36" HorizontalAlignment="Left" Height="409" Margin="0,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="798"/>
+        <Rectangle  Fill="#2E3349" HorizontalAlignment="Left" Height="41" Stroke="Black" VerticalAlignment="Top" Width="800"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="11" Margin="114,273,0,0" Stroke="Black" VerticalAlignment="Top" Width="544"/>
-        <Label Name="Hello" Content="bonjour mr x " HorizontalAlignment="Left" Margin="26,36,0,0" VerticalAlignment="Top" Height="26" Width="182"/>
-        <Label Content="guid :  " HorizontalAlignment="Left" Margin="26,67,0,0" VerticalAlignment="Top" Height="26" Width="46"/>
-        <TextBox x:Name="first_name" HorizontalAlignment="Left" Height="26" Margin="64,158,0,0" Text="first name" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"  RenderTransformOrigin="0.695,-0.214"/>
-        <Button Click="Button_Creat_user" Content="créer un client" HorizontalAlignment="Left" Height="35" Margin="316,206,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="-0.083,0.522"/>
-        <Label Content="Espace admin :" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
-        <TextBox x:Name="last_name" HorizontalAlignment="Left" Height="26" Margin="224,158,0,0" Text="last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.695,-0.214"/>
-        <TextBox x:Name="pin" HorizontalAlignment="Left" Height="26" Margin="386,158,0,0" Text="pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"  RenderTransformOrigin="0.695,-0.214"/>
-        <ComboBox Name="currencyHigh" HorizontalAlignment="Left" Margin="548,158,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Click="decoAdmin" Content="Deconnexion" HorizontalAlignment="Left" Height="27" Margin="703,10,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="-0.083,0.522"/>
-        <Button Content="changePin" Click="changePinAdmin" HorizontalAlignment="Left" Height="20" Margin="711,96,0,0" VerticalAlignment="Top" Width="69" RenderTransformOrigin="-0.083,0.522"/>
-        <TextBox x:Name="pinAdmin"  HorizontalAlignment="Left" Height="24" Margin="703,60,0,0" Text="State" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"  RenderTransformOrigin="0.695,-0.214"/>
-        <Button Content="voire la liste de tous les utilisateurs" HorizontalAlignment="Left" Height="35" Margin="276,67,0,0" VerticalAlignment="Top" Width="216" RenderTransformOrigin="-0.083,0.522"/>
-        <Label Content="gérer un client :" HorizontalAlignment="Left" Margin="45,313,0,0" VerticalAlignment="Top" Height="26" Width="118" RenderTransformOrigin="0.304,10.031"/>
-         <CheckBox Name="statusClient" Content="block"  HorizontalAlignment="Left" Margin="148,398,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Name="SuppressionClient" Click="supressionClient" Content="delete client" HorizontalAlignment="Left" Height="35" Margin="612,352,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="-0.083,0.522" Background="#FFF49B9B"/>
-        <Button Click="updatePinClient" Content="changePin" HorizontalAlignment="Left" Height="20" Margin="442,375,0,0" VerticalAlignment="Top" Width="69" RenderTransformOrigin="-0.083,0.522"  />
-        <TextBox x:Name="PinClient" HorizontalAlignment="Left" Height="24" Margin="438,339,0,0" Text="pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"   RenderTransformOrigin="0.695,-0.214"/>
-        <TextBox x:Name="nomClient" HorizontalAlignment="Left" Height="24" Margin="157,317,0,0" Text="nom client" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"  RenderTransformOrigin="0.695,-0.214"/>
-        <Button Content="select" Click="showDataClient"  HorizontalAlignment="Left" Height="35" Margin="264,310,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="-0.083,0.522"/>
+        <Label Foreground="White" Name="Hello" Content="bonjour mr x " HorizontalAlignment="Left" Margin="26,36,0,0" VerticalAlignment="Top" Height="26" Width="182"/>
+        <Label Foreground="White" Content="guid :  " HorizontalAlignment="Left" Margin="26,67,0,0" VerticalAlignment="Top" Height="26" Width="46"/>
+        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349"   x:Name="first_name" HorizontalAlignment="Left" Height="26" Margin="64,158,0,0" Text="first name" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"  RenderTransformOrigin="0.695,-0.214"/>
+        <Button    BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White"  Click="Button_Creat_user" Content="créer un client" HorizontalAlignment="Left" Height="35" Margin="316,206,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="-0.083,0.522"/>
+        <Label Foreground="White" Content="Espace admin :" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
+        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349"  x:Name="last_name" HorizontalAlignment="Left" Height="26" Margin="224,158,0,0" Text="last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.695,-0.214"/>
+        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349"  x:Name="pin" HorizontalAlignment="Left" Height="26" Margin="386,158,0,0" Text="pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"  RenderTransformOrigin="0.695,-0.214"/>
+        <ComboBox  Name="currencyHigh" HorizontalAlignment="Left" Margin="548,158,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Foreground="White" Background="#181C36" BorderBrush="#FF2E3349"  Click="decoAdmin" Content="Deconnexion" HorizontalAlignment="Left" Height="27" Margin="703,10,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="-0.083,0.522"/>
+        <Button Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" Content="changePin" Click="changePinAdmin" HorizontalAlignment="Left" Height="20" Margin="711,96,0,0" VerticalAlignment="Top" Width="69" RenderTransformOrigin="-0.083,0.522"/>
+        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" x:Name="pinAdmin"  HorizontalAlignment="Left" Height="24" Margin="703,60,0,0" Text="State" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"  RenderTransformOrigin="0.695,-0.214"/>
+        <Button Click="userView" Foreground="White"  Background="#FF2E3349" BorderBrush="#FF2E3349" Content="voire la liste de tous les utilisateurs" HorizontalAlignment="Left" Height="35" Margin="276,67,0,0" VerticalAlignment="Top" Width="216" RenderTransformOrigin="-0.083,0.522"/>
+        <Label Foreground="White" Content="gérer un client :" HorizontalAlignment="Left" Margin="45,313,0,0" VerticalAlignment="Top" Height="26" Width="118" RenderTransformOrigin="0.304,10.031"/>
+         <CheckBox Foreground="White" Name="statusClient" Content="block"  HorizontalAlignment="Left" Margin="148,398,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button  Name="SuppressionClient"  Click="supressionClient" Content="delete client" HorizontalAlignment="Left" Height="35" Margin="612,352,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="-0.083,0.522" Background="#FFF49B9B"/>
+        <Button   BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Click="updatePinClient" Content="changePin" HorizontalAlignment="Left" Height="20" Margin="442,375,0,0" VerticalAlignment="Top" Width="69" RenderTransformOrigin="-0.083,0.522"  />
+        <TextBox Foreground="White"  Background="#FF2E3349" BorderBrush="#FF2E3349" x:Name="PinClient" HorizontalAlignment="Left" Height="24" Margin="438,339,0,0" Text="pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"   RenderTransformOrigin="0.695,-0.214"/>
+        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" x:Name="nomClient" HorizontalAlignment="Left" Height="24" Margin="157,317,0,0" Text="nom client" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"  RenderTransformOrigin="0.695,-0.214"/>
+        <Button Content="select" Click="showDataClient"  HorizontalAlignment="Left" Height="35" Margin="264,310,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="-0.083,0.522"   BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White"/>
     </Grid>
 </Window>

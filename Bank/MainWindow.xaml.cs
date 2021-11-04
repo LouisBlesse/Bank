@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Globalization;
+using System.Runtime.Remoting;
 using System.Windows;
 using Bank.Entity;
 
@@ -157,7 +159,7 @@ namespace Bank
         reader["user_try"].ToString());
         return MyUser;
       }
-
+      SQL.Close();
       return null;
     }
 
@@ -181,6 +183,8 @@ namespace Bank
       SQL.Close();
     }
     
+    
+    
     public static void delete(string UserLastName)
     {
       SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
@@ -192,6 +196,33 @@ namespace Bank
       command.ExecuteNonQuery();
 
       SQL.Close();
+    }
+
+    public static List<User>  printAllUser()
+    {
+      List<User>   first = new List<User> {  };
+
+      SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+      SQL.Open();
+   
+      SQLiteCommand command = SQL.CreateCommand();
+       
+      command.CommandText = "select * from client";
+      
+      SQLiteDataReader reader = command.ExecuteReader();
+      while (reader.Read())
+      {
+        User MyUser = new User(reader["id"].ToString() , reader["block"].ToString(),
+          reader["first_name"].ToString(),
+          reader["last_name"].ToString(),
+          reader["pin"].ToString(),
+          reader["main_currency"].ToString(),
+          reader["user_try"].ToString());
+        first.Add(MyUser);
+        return first;
+      }
+      SQL.Close();
+      return null;
     }
   }
 }

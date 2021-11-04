@@ -107,6 +107,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="CreationCompteAdmin.xaml" />
+    <Page Include="ListUsers.xaml" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -121,6 +122,9 @@
     <Compile Include="Entity\Admin.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Exchangerate.cs" />
+    <Compile Include="ListUsers.xaml.cs">
+      <DependentUpon>ListUsers.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

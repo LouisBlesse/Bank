@@ -84,5 +84,11 @@ namespace Bank
            MainWindow.updateAdmin(pinAdmin.Text, MyAdmin.identifiant);
 
         }
+
+        private void userView(object sender, RoutedEventArgs e)
+        {
+            ListUsers listUsers = new ListUsers();
+            listUsers.Show();
+        }
     }
 }
