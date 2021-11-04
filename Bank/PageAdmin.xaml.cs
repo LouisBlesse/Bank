@@ -65,9 +65,12 @@ namespace Bank
           {
               MessageBox.Show("il n'y pas de user " + nomClient.Text);
           }
+        }
 
-
-
+        private void supressionClient(object sender, RoutedEventArgs e)
+        {
+            MainWindow.delete(nomClient.Text);
+        
         }
     }
 }

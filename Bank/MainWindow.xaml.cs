@@ -160,21 +160,23 @@ namespace Bank
 
       return null;
     }
-    /*   public static void delete(string first_name, string last_name)
-       {
+    public static void delete(string UserLastName)
+    {
          
-         string id = Guid.NewGuid().ToString();
-         bool block = false;
+      string id = Guid.NewGuid().ToString();
+      bool block = false;
          
-         SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
-         SQL.Open();
+      SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+      SQL.Open();
    
-         SQLiteCommand command = SQL.CreateCommand();
-         command.CommandText = "INSERT INTO client (id, block, first_name, last_name, pin, main_currency) values ('"+id+"', "+block+",'"+first_name+"','"+last_name+"',"+Int32.Parse(pin)+",'"+main_currency+"')";
-         command.ExecuteNonQuery();
+      SQLiteCommand command = SQL.CreateCommand();
+       
+
+      command.CommandText = "delete from client where last_name=\""+ UserLastName+ "\"";
+      command.ExecuteNonQuery();
          
-         SQL.Close();
+      SQL.Close();
          
-       }*/
+    }
   }
 }
