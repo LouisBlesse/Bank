@@ -72,5 +72,10 @@ namespace Bank
             MainWindow.delete(nomClient.Text);
         
         }
+
+        private void updatePinClient(object sender, RoutedEventArgs e)
+        {
+            MainWindow.update(PinClient.Text, nomClient.Text);
+        }
     }
 }

@@ -160,11 +160,24 @@ namespace Bank
 
       return null;
     }
+
+    public static void update(string pin, string UserLastName)
+    {
+      SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+      SQL.Open();
+      SQLiteCommand command = SQL.CreateCommand();
+      // UPDATE table SET nom_colonne_1 = 'nouvelle valeur' WHERE condition
+    //  command.CommandText = "delete from client where last_name=\""+ UserLastName+ "\"";
+      command.CommandText = "update client set pin=\""+ pin +"\" where last_name =\"" + UserLastName + "\""; 
+    //  command.CommandText = $"update client set pin=\"{pin}\" where last_name=\"{UserLastName}";
+      command.ExecuteNonQuery();
+      SQL.Close();
+    }
+    
     public static void delete(string UserLastName)
     {
          
-      string id = Guid.NewGuid().ToString();
-      bool block = false;
+ 
          
       SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
       SQL.Open();
