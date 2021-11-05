@@ -17,19 +17,16 @@ namespace Bank
         private void printUser(object sender, RoutedEventArgs e)
         {
           List<User> Users = MainWindow.printAllUser();
-          List<string> AllUsers = new List<string>();
+           
           string test = "";
-          for (int i = 0; i < Users.Count; i++)
+          for (int i = 0; i < Users.Capacity; i++)
           {
-              test = Users[i].id + " "  + Users[i].block + "" + Users[i].first_name  + Users[i].last_name;
-              AllUsers.Add(test);
+              test +=  Users[i].first_name;
           }
-
-          for (int i = 0; i < AllUsers.Capacity; i++)
-          {
-              test.Concat(AllUsers[i]);
-          }
-
+        
+        
+           
+ 
           first_name.Text = test;
         }
     }

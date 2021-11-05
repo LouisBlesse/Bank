@@ -219,10 +219,10 @@ namespace Bank
           reader["main_currency"].ToString(),
           reader["user_try"].ToString());
         first.Add(MyUser);
-        return first;
+    
       }
       SQL.Close();
-      return null;
+      return first;
     }
   }
 }
