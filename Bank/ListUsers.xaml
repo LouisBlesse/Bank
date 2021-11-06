@@ -8,7 +8,15 @@
         Title="ListUsers" Height="450" Width="800">
     
     <Grid>
-        <TextBox Name="first_name"  Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349"   HorizontalAlignment="Left" Height="26" Margin="79,167,0,0" Text="first name" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"  RenderTransformOrigin="0.695,-0.214"/>
-        <Button Click="printUser" Content="Button" HorizontalAlignment="Left" Margin="289,66,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.268,-7.296"/>
+        <Button Click="printUser" Content="Button" HorizontalAlignment="Left" Margin="346,44,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.268,-7.296"/>
+        <ScrollViewer HorizontalAlignment="Left" Height="292" Margin="36,89,0,0" VerticalAlignment="Top" Width="721" VerticalScrollBarVisibility="Auto">
+            <ScrollViewer.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF3F5293" Offset="1"/>
+                </LinearGradientBrush>
+            </ScrollViewer.Background>
+            <StackPanel Name="StackUser"   />
+        </ScrollViewer>
     </Grid>
 </Window>
