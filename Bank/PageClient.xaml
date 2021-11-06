@@ -17,12 +17,13 @@
         <Label Foreground="White" Content="votre solde en " HorizontalAlignment="Left" Margin="250,58,0,0" VerticalAlignment="Top"/>
         <Label Name="ValueIS" Foreground="White" Content="est de : " HorizontalAlignment="Left" Margin="500,58,0,0" VerticalAlignment="Top"/>
         <Button Click="SeachMoney" BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Content="Seach" HorizontalAlignment="Left" Height="20" Margin="350,95,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="-0.083,0.522"/>
+        <ComboBox  Name="ComboBoxtestAjout" HorizontalAlignment="Left" Margin="148,100,0,0" VerticalAlignment="Top" Width="120"/>
 
         <Label Foreground="White" Content="ajouter / retirer  " HorizontalAlignment="Left" Margin="26,147,0,0" VerticalAlignment="Top"/>
         <Label Foreground="White" Content="valeur a ajouter / retirer  " HorizontalAlignment="Left" Margin="147,165,0,0" VerticalAlignment="Top"/>
-        <TextBox  Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349"  Name="State_Copy" HorizontalAlignment="Left" Height="26" Margin="339,165,0,0" Text="State" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"  RenderTransformOrigin="0.695,-0.214"/>
-        <Button BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Content="ajouter" HorizontalAlignment="Left" Height="35" Margin="311,208,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="-0.083,0.522"/>
-        <Button BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Content="retirer" HorizontalAlignment="Left" Height="35" Margin="459,208,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="-0.083,0.522"/>
+        <TextBox Name="AmountAdd" Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" HorizontalAlignment="Left" Height="26" Margin="339,165,0,0" Text="State" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"  RenderTransformOrigin="0.695,-0.214"/>
+        <Button Click="AddArgent" BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Content="ajouter" HorizontalAlignment="Left" Height="35" Margin="311,208,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="-0.083,0.522"/>
+        <Button Click="EnleverArgent" BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Content="retirer" HorizontalAlignment="Left" Height="35" Margin="459,208,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="-0.083,0.522"/>
         <ComboBox  Name="ComboBoxtest" HorizontalAlignment="Left" Margin="148,338,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox Name="currencyRight" HorizontalAlignment="Left" Margin="478,338,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.138,2.522"/>
         <TextBox   Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" Name="State_Copy1" HorizontalAlignment="Left" Height="35" Margin="142,396,0,0" Text="State" TextWrapping="Wrap" VerticalAlignment="Top" Width="126"   RenderTransformOrigin="0.695,-0.214"/>

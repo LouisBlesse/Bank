@@ -24,6 +24,7 @@ namespace Bank
             AllCurrency = InitializeCurrency();
             currencyHigh.ItemsSource = MainWindow.GetAllCur(MyUser);
             ComboBoxtest.ItemsSource = MainWindow.GetAllCur(MyUser);
+            ComboBoxtestAjout.ItemsSource = MainWindow.GetAllCur(MyUser);
 
          }
          //function conversion
@@ -40,6 +41,7 @@ namespace Bank
             MainWindow.ConvertVal(ComboBoxtest.SelectedValue.ToString(), currencyRight.SelectedValue.ToString(),Int32.Parse(State_Copy1.Text),Var,MyUser);
             currencyHigh.ItemsSource = MainWindow.GetAllCur(MyUser);
             ComboBoxtest.ItemsSource = MainWindow.GetAllCur(MyUser);
+            ComboBoxtestAjout.ItemsSource = MainWindow.GetAllCur(MyUser);
         }
          
          public async Task<Exchangerate.RootRoot> InitializeCurrency()
@@ -79,6 +81,16 @@ namespace Bank
         public void SeachMoney(object sender, RoutedEventArgs e)
         {
             ValueIS.Content = "est de :"+MainWindow.GetVAlue(MyUser.id, currencyHigh.SelectedValue.ToString()).ToString();
+        }
+        
+        public void AddArgent(object sender, RoutedEventArgs e)
+        {
+            MainWindow.ajoutArgent(Int32.Parse(AmountAdd.Text), MyUser, ComboBoxtestAjout.SelectedValue.ToString());
+        }
+        
+        public void EnleverArgent(object sender, RoutedEventArgs e)
+        {
+            MainWindow.enleveArgent(Int32.Parse(AmountAdd.Text), MyUser, ComboBoxtestAjout.SelectedValue.ToString());
         }
         
     }

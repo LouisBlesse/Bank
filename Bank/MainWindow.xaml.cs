@@ -338,6 +338,53 @@ namespace Bank
       }
       SQL.Close();
     }
+
+
+    public static void ajoutArgent(int amount, User user, string currency)
+    {
+      SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+      SQL.Open();
+      
+      SQLiteCommand command = SQL.CreateCommand();
+      command.Parameters.AddWithValue("@param1", user.id);
+      command.Parameters.AddWithValue("@param2", currency);
+      command.Parameters.AddWithValue("@param3", amount);
+      try
+      {
+        command.CommandText = "INSERT INTO user_currency (id_user, id_currency, amount) values (@param1, @param2,@param3)";
+        command.ExecuteNonQuery();
+      }
+      catch (Exception e)
+      {
+        command.CommandText = "UPDATE user_currency SET amount= amount + @param3 where id_user=@param1 and  id_currency = @param2;";
+        command.ExecuteNonQuery();
+        Console.WriteLine(e);
+      }
+      SQL.Close();
+    }
+    
+    public static void enleveArgent(int amount, User user, string currency)
+    {
+      SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+      SQL.Open();
+      
+      SQLiteCommand command = SQL.CreateCommand();
+      command.Parameters.AddWithValue("@param1", user.id);
+      command.Parameters.AddWithValue("@param2", currency);
+      command.Parameters.AddWithValue("@param3", amount);
+      try
+      {
+        command.CommandText = "INSERT INTO user_currency (id_user, id_currency, amount) values (@param1, @param2,-@param3)";
+        command.ExecuteNonQuery();
+      }
+      catch (Exception e)
+      {
+        command.CommandText = "UPDATE user_currency SET amount= amount - @param3 where id_user=@param1 and  id_currency = @param2;";
+        command.ExecuteNonQuery();
+        Console.WriteLine(e);
+      }
+      SQL.Close();
+    }
   }
   
   
