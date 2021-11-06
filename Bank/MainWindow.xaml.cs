@@ -224,5 +224,122 @@ namespace Bank
       SQL.Close();
       return first;
     }
+
+    public static List<string> GetAllCur(User user)
+    {
+      List<string> Cur = new List<string> ();
+
+      SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+      SQL.Open();
+      
+      SQLiteCommand command = SQL.CreateCommand();
+       
+      command.CommandText = "select id_currency from user_currency where id_user =\""+ user.id+ "\"";
+      
+      SQLiteDataReader reader = command.ExecuteReader();
+      while (reader.Read())
+      {
+        Cur.Add(reader["id_currency"].ToString());
+      }
+
+      return Cur;
+    }
+    
+    public static void GiveToUser(string last_name, int amount)
+    {
+      string cur_name="try";
+      string id_user = "try";
+      
+      SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+      SQL.Open();
+      
+      SQLiteCommand command3 = SQL.CreateCommand();
+      command3.CommandText = "select id from client where last_name =\""+ last_name+ "\"";
+      SQLiteDataReader reader3 = command3.ExecuteReader();
+      while (reader3.Read())
+      {
+        id_user=(reader3["id"].ToString());
+      }
+      
+      
+      SQLiteCommand command = SQL.CreateCommand();
+      command.CommandText = "select main_currency from client where id =\""+ id_user+ "\"";
+      SQLiteDataReader reader = command.ExecuteReader();
+      while (reader.Read())
+      {
+        cur_name=(reader["main_currency"].ToString());
+      }
+      
+      SQLiteCommand command2 = SQL.CreateCommand();
+      command2.Parameters.AddWithValue("@param1", id_user);
+      command2.Parameters.AddWithValue("@param2", cur_name);
+      command2.Parameters.AddWithValue("@param3", amount);
+      try
+      {
+        command2.CommandText = "INSERT INTO user_currency (id_user, id_currency, amount) values (@param1, @param2,@param3)";
+        command2.ExecuteNonQuery();
+      }
+      catch (Exception e)
+      {
+        command2.CommandText = "UPDATE user_currency SET amount=@param3 where id_user=@param1 and  id_currency = @param2;";
+        command2.ExecuteNonQuery();
+        Console.WriteLine(e);
+      }
+
+      SQL.Close();
+    }
+
+    public static int GetVAlue(string id_user, string id_currency)
+    {
+      int amount = 0;
+      SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+      SQL.Open();
+      SQLiteCommand command = SQL.CreateCommand();
+      command.CommandText = "select amount from user_currency where id_user='"+ id_user + "'and  id_currency ='"+ id_currency +"'";
+      
+      SQLiteDataReader reader = command.ExecuteReader();
+      while (reader.Read())
+      {
+        amount = Int32.Parse(reader["amount"].ToString());
+      }
+      SQL.Close();
+      return amount;
+    }
+
+
+    public static void ConvertVal(string NameOld, string NameNew,int ValOld, double ValNew, User user)
+    {
+      SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+      SQL.Open();
+      
+      SQLiteCommand command = SQL.CreateCommand();
+      command.Parameters.AddWithValue("@param1", ValOld);
+      command.Parameters.AddWithValue("@paramID", user.id);
+      command.Parameters.AddWithValue("@paramNO", NameOld);
+      command.CommandText = "update user_currency set amount=amount - @param1 where id_user =@paramID and id_currency =@paramNO"; 
+      command.ExecuteNonQuery();
+      
+      
+      
+      SQLiteCommand command2 = SQL.CreateCommand();
+      command2.Parameters.AddWithValue("@param1", user.id);
+      command2.Parameters.AddWithValue("@param2", NameNew);
+      command2.Parameters.AddWithValue("@param3", ValNew);
+      try
+      {
+        command2.CommandText = "INSERT INTO user_currency (id_user, id_currency, amount) values (@param1, @param2,@param3)";
+        command2.ExecuteNonQuery();
+      }
+      catch (Exception e)
+      {
+        command2.CommandText = "UPDATE user_currency SET amount= amount + @param3 where id_user=@param1 and  id_currency = @param2;";
+        command2.ExecuteNonQuery();
+        Console.WriteLine(e);
+      }
+      SQL.Close();
+    }
   }
+  
+  
+
 }

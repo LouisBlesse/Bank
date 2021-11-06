@@ -90,5 +90,10 @@ namespace Bank
             ListUsers listUsers = new ListUsers();
             listUsers.Show();
         }
+
+        public void Add_Money(object sender, RoutedEventArgs e)
+        {
+            MainWindow.GiveToUser(nomClient.Text, Int32.Parse(AmountToAdd.Text));
+        }
     }
 }

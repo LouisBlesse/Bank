@@ -21,7 +21,10 @@ namespace Bank
              InitializeComponent();
              Hello.Content = "Bonjour Monsieur " + MyUser.last_name;
          //   PageClient.AllData = Initialize();
-            PageClient.AllCurrency = InitializeCurrency();
+            AllCurrency = InitializeCurrency();
+            currencyHigh.ItemsSource = MainWindow.GetAllCur(MyUser);
+            ComboBoxtest.ItemsSource = MainWindow.GetAllCur(MyUser);
+
          }
          //function conversion
 
@@ -32,6 +35,11 @@ namespace Bank
             int c = Int32.Parse(State_Copy1.Text);
             string test  = await Lune.Connect(a,b,c);
             State_Copy2.Text = Lune.transfert(test).conversion_result.ToString();
+
+            double Var = Convert.ToDouble(State_Copy2.Text);
+            MainWindow.ConvertVal(ComboBoxtest.SelectedValue.ToString(), currencyRight.SelectedValue.ToString(),Int32.Parse(State_Copy1.Text),Var,MyUser);
+            currencyHigh.ItemsSource = MainWindow.GetAllCur(MyUser);
+            ComboBoxtest.ItemsSource = MainWindow.GetAllCur(MyUser);
         }
          
          public async Task<Exchangerate.RootRoot> InitializeCurrency()
@@ -46,9 +54,9 @@ namespace Bank
                     {
                         allCurrency.Add(tmp.supported_codes[i][0]);
                     }
-                    ComboBoxtest.ItemsSource = allCurrency;
+                    //ComboBoxtest.ItemsSource = allCurrency;
                     currencyRight.ItemsSource = allCurrency;    
-                    currencyHigh.ItemsSource = allCurrency;
+                    //currencyHigh.ItemsSource = allCurrency;
                 }
                 catch (Exception e)
                 {
@@ -67,5 +75,11 @@ namespace Bank
             menu.Show();
             Close();
         }
+
+        public void SeachMoney(object sender, RoutedEventArgs e)
+        {
+            ValueIS.Content = "est de :"+MainWindow.GetVAlue(MyUser.id, currencyHigh.SelectedValue.ToString()).ToString();
+        }
+        
     }
 }

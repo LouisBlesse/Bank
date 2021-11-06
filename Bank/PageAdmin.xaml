@@ -29,5 +29,9 @@
         <TextBox Foreground="White"  Background="#FF2E3349" BorderBrush="#FF2E3349" x:Name="PinClient" HorizontalAlignment="Left" Height="24" Margin="438,339,0,0" Text="pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"   RenderTransformOrigin="0.695,-0.214"/>
         <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" x:Name="nomClient" HorizontalAlignment="Left" Height="24" Margin="157,317,0,0" Text="nom client" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"  RenderTransformOrigin="0.695,-0.214"/>
         <Button Content="select" Click="showDataClient"  HorizontalAlignment="Left" Height="35" Margin="264,310,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="-0.083,0.522"   BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White"/>
+        
+        <Button Content="Add money" Click="Add_Money" Margin="560,200,0,0" Height="35" Width="90"/>
+        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" x:Name="AmountToAdd"  Text="Amount to add" TextWrapping="Wrap"  HorizontalAlignment="Left" Height="24" Margin="438,300,0,0"  VerticalAlignment="Top" Width="87"   RenderTransformOrigin="0.695,-0.214"/>
+
     </Grid>
 </Window>
