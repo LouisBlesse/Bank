@@ -16,7 +16,7 @@ namespace Bank
             this.MyAdmin = MyAdmin;
             AllCurrency = GetAll();
             InitializeComponent();
-            Hello.Content = "Bonjour Monsieur " + MyAdmin.identifiant;
+            Hello.Content = "Hello " + MyAdmin.identifiant;
         }
 
         public async Task<Exchangerate.RootRoot> GetAll()
@@ -98,7 +98,9 @@ namespace Bank
 
         private void blockClient(object sender, RoutedEventArgs e)
         {
-          MainWindow.blockClient( statusClient.IsChecked.Value, nomClient.Text);
+           
+            MainWindow.blockClient( statusClient.IsChecked.Value, nomClient.Text);
+         
         }
     }
 }

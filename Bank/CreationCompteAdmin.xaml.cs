@@ -15,24 +15,19 @@ namespace Bank
 
         public void Button_Click_Create(object sender, RoutedEventArgs e)
         {
-            salut.Background = Brushes.Green;
-            MainWindow.Create_Admin(pseudo.Text,mdp.Text);
+            MainWindow.Create_Admin(pseudo.Text,passwordAdminCreate.Password);
+            Menu menu = new Menu();
+            menu.Show();
+            Close();
         }
         
         private void retour(object sender, RoutedEventArgs e)
         {
-           // test.Background = Brushes.Green;
-           Menu menu = new Menu();
+            Menu menu = new Menu();
            menu.Show();
            Close();
         }
-        // test.Background = Brushes.Green;
-        private void adminPage(object sender, RoutedEventArgs e)
-        {
-            test.Background = Brushes.White;
-            Menu menu = new Menu();
-            
-        }
+       
     }
 }
 

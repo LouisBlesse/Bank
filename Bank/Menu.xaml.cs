@@ -12,11 +12,12 @@ namespace Bank
         {
             InitializeComponent();
         }
+        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
           try
           {
-              if (MainWindow.Co_User(UserLastName.Text, UserMdp.Text))
+              if (MainWindow.Co_User(UserLastName.Text, passwordClient.Password))
                   Close();
               else
                   MessageBox.Show("bad credentials");
@@ -30,7 +31,7 @@ namespace Bank
         {
         try
         {
-            if (MainWindow.Co_Admin(AdminName.Text, AdminMdp.Text))
+            if (MainWindow.Co_Admin(AdminName.Text, passwordAdmin.Password))
                 Close();
             else
                 MessageBox.Show("bad credentials");
@@ -44,6 +45,7 @@ namespace Bank
         {
             CreationCompteAdmin p = new CreationCompteAdmin(); 
             p.Show();
+            Close();
         }
     }
 }

@@ -9,18 +9,22 @@
 
         Title="Menu" Height="450" Width="800">
     <Grid>
-        <Rectangle Fill="#2E3349" HorizontalAlignment="Left" Height="41" Stroke="Black" VerticalAlignment="Top" Width="800"/>
-        <Rectangle Fill="#181C36" HorizontalAlignment="Left" Height="384" Margin="-4,36,-0.4,0" Stroke="Black" VerticalAlignment="Top" Width="798"/>
-        <Button  BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Content="nouveau compte admin" Click="Button_Click_NewAdmin" HorizontalAlignment="Left" Height="40" Margin="319,349,0,0" VerticalAlignment="Top" Width="178"/>
-        <TextBox  BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" x:Name="AdminName" HorizontalAlignment="Left" Height="40" Margin="135,128,0,0" Text="admin name" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
-        <Label Foreground="White" Content="admin" HorizontalAlignment="Left" Margin="190,83,0,0" VerticalAlignment="Top" Width="110"/>
-        <Label Foreground="White" Content="client" HorizontalAlignment="Left" Margin="551,83,0,0" VerticalAlignment="Top" Width="110"/>
-        <TextBox BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" x:Name="AdminMdp" HorizontalAlignment="Left" Height="40" Margin="135,216,0,0" Text="mdp" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
-        <TextBox BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" x:Name="UserLastName" HorizontalAlignment="Left" Height="40" Margin="482,128,0,0" Text="user last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
-        <TextBox BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" x:Name="UserMdp" HorizontalAlignment="Left" Height="40" Margin="482,216,0,0" Text="mdp" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
-        <Button  BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Content="connexion" Click="Button_Click_Admin" HorizontalAlignment="Left" Height="40" Margin="168,288,0,0" VerticalAlignment="Top" Width="112"/>
-        <Button BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Content="Connexion" Click="Button_Click" HorizontalAlignment="Left" Height="40" Margin="519,288,0,0" VerticalAlignment="Top" Width="109"/>
-        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="261" Margin="404,67,0,0" Stroke="Black" VerticalAlignment="Top" Width="5"/>
-        <Label Content="chercher nom urgent !!!!" HorizontalAlignment="Left" Margin="347,10,0,0" VerticalAlignment="Top" Width="150" Foreground="White"/>
+
+        <Rectangle Fill="#2E3349" HorizontalAlignment="Left" Height="420" Stroke="Black" VerticalAlignment="Top" Width="800" Margin="0,0,-6.4,0"/>
+        <Rectangle Fill="#181C36" HorizontalAlignment="Left" Height="370" Margin="40,24,0,0" Stroke="#2E3349" VerticalAlignment="Top" Width="715"/>
+        <Button  BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Content="Create Admin" Click="Button_Click_NewAdmin" HorizontalAlignment="Left" Height="40" Margin="306,330,0,0" VerticalAlignment="Top" Width="178"/>
+        <TextBox  BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" x:Name="AdminName" HorizontalAlignment="Left" Height="40" Margin="135,101,0,0" Text="Last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
+        <Label Foreground="White" Content="Admin" HorizontalAlignment="Left" Margin="170,46,0,0" VerticalAlignment="Top" Width="110" FontFamily="Cooper Black" FontSize="25"/>
+        <Label Foreground="White" Content="Client" HorizontalAlignment="Left" Margin="518,46,0,0" VerticalAlignment="Top" Width="110" FontFamily="Cooper Black" FontSize="25"/>
+        <!--   <TextBox BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" x:Name="AdminMdp" HorizontalAlignment="Left" Height="40" Margin="135,202,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/> -->
+        <TextBox BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" x:Name="UserLastName" HorizontalAlignment="Left" Height="40" Margin="482,101,0,0" Text="Last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
+        <!--  <TextBox BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" x:Name="UserMdp" HorizontalAlignment="Left" Height="40" Margin="563,335,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/> -->
+        <Button  BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Content="Log in" Click="Button_Click_Admin" HorizontalAlignment="Left" Height="40" Margin="168,245,0,0" VerticalAlignment="Top" Width="112"/>
+        <Button BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Content="Log in" Click="Button_Click" HorizontalAlignment="Left" Height="40" Margin="519,245,0,0" VerticalAlignment="Top" Width="109"/>
+        <PasswordBox HorizontalAlignment="Left" BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Margin="135,181,0,0" VerticalAlignment="Top" Width="179" Password="" Name="passwordAdmin" Height="40"/>
+        <PasswordBox HorizontalAlignment="Left" BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Margin="482,181,0,0" VerticalAlignment="Top" Width="179" Password="" Name="passwordClient" Height="40"/>
+        <Label Foreground="White"  Content="Password" HorizontalAlignment="Left" Margin="135,154,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Foreground="White" Content="Pin" HorizontalAlignment="Left" Margin="482,154,0,0" VerticalAlignment="Top" Width="75"/>
+        <!-- <PasswordBox BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" x:Name="AdminMdp" HorizontalAlignment="Left" Height="40" Margin="61,243,0,0" Password="Password"  VerticalAlignment="Top" Width="179"/>  -->
     </Grid>
 </Window>

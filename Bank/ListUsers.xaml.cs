@@ -48,8 +48,7 @@ namespace Bank
 
         private void closePage(object sender, RoutedEventArgs e)
         {
-            ListUsers listUsers = new ListUsers();
-            listUsers.Close();
+           Close();
         }
     }
 }

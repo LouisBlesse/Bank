@@ -19,13 +19,13 @@ namespace Bank
          {
              this.MyUser = MyUser;
              InitializeComponent();
-             Hello.Content = "Bonjour Monsieur " + MyUser.last_name;
+             Hello.Content = "Hello " + MyUser.last_name;
+             guid.Content = "guid :" + MyUser.id;
          //   PageClient.AllData = Initialize();
             AllCurrency = InitializeCurrency();
             currencyHigh.ItemsSource = MainWindow.GetAllCur(MyUser);
             ComboBoxtest.ItemsSource = MainWindow.GetAllCur(MyUser);
             ComboBoxtestAjout.ItemsSource = MainWindow.GetAllCur(MyUser);
-
          }
          //function conversion
 

@@ -5,6 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:Bank"
         mc:Ignorable="d"
+        ResizeMode="NoResize" 
         Title="PageAdmin" Height="501.6" Width="800">
 
     <Window.Resources>
@@ -23,8 +24,8 @@
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="23*"/>
-            <RowDefinition Height="117*"/>
+            <RowDefinition/>
+            <RowDefinition Height="394.4"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
@@ -33,29 +34,30 @@
             <ColumnDefinition Width="416*"/>
         </Grid.ColumnDefinitions>
         <Rectangle  Fill="#2E3349" HorizontalAlignment="Left" Height="472" Stroke="Black" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="4" Margin="0,0,-6.4,0" Grid.RowSpan="2"/>
-        <Rectangle Fill="#181C36" HorizontalAlignment="Left" Height="425" Margin="20.8,37,0,0" Stroke="Black" VerticalAlignment="Top" Width="751" Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Column="1"/>
-        <Label Foreground="White" x:Name="Hello" Content="bonjour mr x " HorizontalAlignment="Left" Margin="12,62,0,0" VerticalAlignment="Top" Height="26" Width="182" Grid.RowSpan="2" Grid.Column="2"/>
-        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349"   x:Name="first_name" HorizontalAlignment="Left" Height="30" Margin="32,75.2,0,0" Text="first name" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"  RenderTransformOrigin="0.695,-0.214" Grid.Row="1" Grid.Column="2"/>
-        <Button   BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White"  Click="Button_Creat_user" Content="créer un client" HorizontalAlignment="Left" Height="40" Margin="42,237.2,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.083,0.522" Grid.Row="1" Grid.Column="2"/>
-        <Label Foreground="White" Content="Admin Section " HorizontalAlignment="Left" Margin="12,6,0,0" VerticalAlignment="Top" Height="26" Width="88" RenderTransformOrigin="0.622,0.531" Grid.Column="2"/>
-        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349"  x:Name="last_name" HorizontalAlignment="Left" Height="30" Margin="32,116.2,0,0" Text="last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" RenderTransformOrigin="0.695,-0.214" Grid.Row="1" Grid.Column="2"/>
-        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349"  x:Name="pin" HorizontalAlignment="Left" Height="30" Margin="32,155.2,0,0" Text="pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"  RenderTransformOrigin="0.695,-0.214" Grid.Row="1" Grid.Column="2"/>
-        <ComboBox  x:Name="currencyHigh" HorizontalAlignment="Left" Margin="42,196.2,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-1.427,3.662" Grid.Row="1" Grid.Column="2"/>
-        <Button  Foreground="White" Background="#181C36" BorderBrush="#FF2E3349"  Click="decoAdmin" Content="Deconnexion" HorizontalAlignment="Left" Height="27" Margin="310.4,5,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="-0.083,0.522" Grid.Column="3"/>
-        <Button Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" Content="changePin" Click="changePinAdmin" HorizontalAlignment="Left" Height="20" Margin="304.4,33.2,0,0" VerticalAlignment="Top" Width="69" RenderTransformOrigin="-0.083,0.522" Grid.Column="3" Grid.Row="1"/>
-        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" x:Name="pinAdmin"  HorizontalAlignment="Left" Height="24" Margin="296.4,66,0,0" Text="State" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"  RenderTransformOrigin="0.695,-0.214" Grid.Column="3" Grid.RowSpan="2"/>
-        <Button  Click="userView" Foreground="White"  Background="#FF2E3349" BorderBrush="#FF2E3349" Content="voire la liste de tous les utilisateurs" HorizontalAlignment="Left" Height="35" Margin="289,33.2,0,0" VerticalAlignment="Top" Width="216" RenderTransformOrigin="-0.083,0.522" Grid.ColumnSpan="2" BorderThickness="1" Grid.Row="1" Grid.Column="2"/>
-        <Label Foreground="White" Content="select last name" HorizontalAlignment="Left" Margin="281,123.2,0,0" VerticalAlignment="Top" Height="26" Width="118" RenderTransformOrigin="0.304,10.031" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="2"/>
-        <CheckBox Click="blockClient" Foreground="White" x:Name="statusClient" Content="unblock"  HorizontalAlignment="Left" Margin="39.4,262.2,0,0" VerticalAlignment="Top" Width="120" Grid.Column="3" Grid.Row="1"/>
-        <Button  x:Name="SuppressionClient"  Click="supressionClient" Content="delete client" HorizontalAlignment="Left" Height="35" Margin="40.4,290.2,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="-0.083,0.522" Background="#FFCA4D4D" Grid.Column="3" Grid.Row="1" Foreground="White"/>
-        <Button   BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Click="updatePinClient" Content="changePin" HorizontalAlignment="Left" Height="26" Margin="161.4,223.4,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="-0.083,0.522" Grid.Column="3" Grid.Row="1"  />
-        <TextBox Foreground="White"  Background="#FF2E3349" BorderBrush="#FF2E3349" x:Name="PinClient" HorizontalAlignment="Left" Height="23" Margin="39.4,223.2,0,0" Text="pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"   RenderTransformOrigin="0.695,-0.214" Grid.Column="3" Grid.Row="1"/>
-        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" x:Name="nomClient" HorizontalAlignment="Left" Height="32" Margin="39.4,127.2,0,0" Text="Last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"  RenderTransformOrigin="0.695,-0.214" Grid.Column="3" Grid.Row="1"/>
-        <Button Content="select" Click="showDataClient"  HorizontalAlignment="Left" Height="26" Margin="161.4,131.4,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="-0.083,0.522"   BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Grid.Column="3" Grid.Row="1"/>
-         <Button Content="Add money" Click="Add_Money" Margin="161.4,177.4,182.6,194" Background="#FF2E3349" Foreground="#FFFFFCFC" BorderBrush="#FF2E3349"   Grid.Column="3" Grid.Row="1"/>
-        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" x:Name="AmountToAdd"  Text="Amount" TextWrapping="Wrap"  HorizontalAlignment="Left" Height="26" Margin="39.4,176.2,0,0"  VerticalAlignment="Top" Width="100"   RenderTransformOrigin="0.695,-0.214" Grid.Column="3" Grid.Row="1"/>
-        <Label Foreground="White" Content="add money" HorizontalAlignment="Left" Margin="281,172.2,0,0" VerticalAlignment="Top" Height="26" Width="118" RenderTransformOrigin="0.304,10.031" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="2"/>
-        <Label Foreground="White" Content="Change pin" HorizontalAlignment="Left" Margin="281,219.2,0,0" VerticalAlignment="Top" Height="26" Width="118" RenderTransformOrigin="0.304,10.031" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="2"/>
+        <Rectangle   Fill="#181C36" HorizontalAlignment="Left" Height="421" Margin="9.8,41,0,0" Stroke="#FF2E3349" VerticalAlignment="Top" Width="751" Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Column="1"/>
+        <Label Foreground="White" x:Name="Hello" Content="Hello x " HorizontalAlignment="Left" Margin="12,54,0,0" VerticalAlignment="Top" Height="34" Width="246" Grid.RowSpan="2" Grid.Column="2" FontSize="22" FontFamily="Cooper Black"/>
+        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349"   x:Name="first_name" HorizontalAlignment="Left" Height="30" Margin="32,82.4,0,0" Text="First name" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"  RenderTransformOrigin="0.695,-0.214" Grid.Row="1" Grid.Column="2"/>
+        <Button   BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White"  Click="Button_Creat_user" Content="Create" HorizontalAlignment="Left" Height="40" Margin="42,244.4,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.083,0.522" Grid.Row="1" Grid.Column="2"/>
+        <Label Foreground="White" Content="Admin Area" HorizontalAlignment="Left" Margin="12,4,0,0" VerticalAlignment="Top" Height="32" Width="204" RenderTransformOrigin="0.622,0.531" Grid.Column="2" FontSize="25" FontFamily="Cooper Black"/>
+        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349"  x:Name="last_name" HorizontalAlignment="Left" Height="30" Margin="32,123.4,0,0" Text="Last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" RenderTransformOrigin="0.695,-0.214" Grid.Row="1" Grid.Column="2"/>
+        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349"  x:Name="pin" HorizontalAlignment="Left" Height="30" Margin="32,162.4,0,0" Text="Pin" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"  RenderTransformOrigin="0.695,-0.214" Grid.Row="1" Grid.Column="2"/>
+        <ComboBox  x:Name="currencyHigh" HorizontalAlignment="Left" Margin="42,203.4,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-1.427,3.662" Grid.Row="1" Grid.Column="2"/>
+        <Button  Style="{DynamicResource RoundedButtonStyle}" Foreground="White" Background="#181C36" BorderBrush="#FF2E3349"  Click="decoAdmin" Content="Log out" HorizontalAlignment="Left" Height="27" Margin="310.4,5,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="-0.083,0.522" Grid.Column="3"/>
+        <Button Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" Content="Update" Click="changePinAdmin" HorizontalAlignment="Left" Height="35" Margin="248.4,231.4,0,0" VerticalAlignment="Top" Width="104" RenderTransformOrigin="-0.083,0.522" Grid.Column="3" Grid.Row="1"/>
+        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" x:Name="pinAdmin"  HorizontalAlignment="Left" Height="34" Margin="248.4,186.4,0,0" Text="Pin admin" TextWrapping="Wrap" VerticalAlignment="Top" Width="104"  RenderTransformOrigin="0.695,-0.214" Grid.Column="3" Grid.Row="1"/>
+        <Button  Click="userView" Foreground="White"  Background="#FF2E3349" BorderBrush="#FF2E3349" Content="Click here" HorizontalAlignment="Left" Height="40" Margin="232.4,74.4,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.083,0.522" BorderThickness="1" Grid.Row="1" Grid.Column="3"/>
+        <CheckBox Click="blockClient" BorderBrush="#FF2E3349" Foreground="White" Background="#FF2E3349" x:Name="statusClient" Content="block / unblock"  HorizontalAlignment="Left" Margin="292,231.4,0,0" VerticalAlignment="Top" Width="115" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Height="16"/>
+        <Button  x:Name="SuppressionClient"  Click="supressionClient" Content="delete client" HorizontalAlignment="Left" Height="35" Margin="287,261.4,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="-0.083,0.522" Background="#FFCA4D4D" Grid.Column="2" Grid.Row="1" Foreground="White" Grid.ColumnSpan="2"/>
+        <Button   BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Click="updatePinClient" Content="Update " HorizontalAlignment="Left" Height="39" Margin="110.4,178.4,0,0" VerticalAlignment="Top" Width="74" RenderTransformOrigin="-0.083,0.522" Grid.Column="3" Grid.Row="1"  />
+        <TextBox Foreground="White"  Background="#FF2E3349" BorderBrush="#FF2E3349" x:Name="PinClient" HorizontalAlignment="Left" Height="39" Margin="287,178.4,0,0" Text="Pin client" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"   RenderTransformOrigin="0.695,-0.214" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" x:Name="nomClient" HorizontalAlignment="Left" Height="39" Margin="287,89.4,0,0" Text="Last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"  RenderTransformOrigin="0.695,-0.214" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Button Content="select" Click="showDataClient"  HorizontalAlignment="Left" Height="40" Margin="110.4,87.4,0,0" VerticalAlignment="Top" Width="74" RenderTransformOrigin="-0.083,0.522"   BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Grid.Column="3" Grid.Row="1"/>
 
+         <TextBox Foreground="White" Background="#FF2E3349" BorderBrush="#FF2E3349" x:Name="AmountToAdd"  Text="Amount" TextWrapping="Wrap"  HorizontalAlignment="Left" Height="39" Margin="287,133.4,0,0"  VerticalAlignment="Top" Width="133"   RenderTransformOrigin="0.695,-0.214" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Label Foreground="White" Content="Create user" HorizontalAlignment="Left" Margin="32,41.4,0,0" VerticalAlignment="Top" Height="51" Width="226" RenderTransformOrigin="0.304,10.031" Grid.Row="1" Grid.Column="2" FontFamily="Cooper Black" FontSize="18"/>
+        <Label Foreground="White" Content="List of all users" HorizontalAlignment="Left" Margin="212.4,41.4,-22.4,0" VerticalAlignment="Top" Height="51" Width="226" RenderTransformOrigin="0.304,10.031" Grid.Column="3" FontFamily="Cooper Black" FontSize="18" Grid.Row="1"/>
+        <Label Foreground="White" Content="Manage client" HorizontalAlignment="Left" Margin="286,41.4,0,0" VerticalAlignment="Top" Height="51" Width="226" RenderTransformOrigin="0.304,10.031" Grid.Row="1" Grid.Column="2" FontFamily="Cooper Black" FontSize="18" Grid.ColumnSpan="2"/>
+        <Label Foreground="White" Content="Update" HorizontalAlignment="Left" Margin="260.4,151.4,0,0" VerticalAlignment="Top" Height="49" Width="146" RenderTransformOrigin="0.304,10.031" Grid.Column="3" FontFamily="Cooper Black" FontSize="18" Grid.Row="1"/>
+        <Button Content="Add money" Click="Add_Money"  Height="39" Margin="110.4,133.4,226.6,0" VerticalAlignment="Top"    BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Grid.Column="3" Grid.Row="1"/>
     </Grid>
 </Window>

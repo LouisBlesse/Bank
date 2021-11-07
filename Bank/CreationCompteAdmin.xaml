@@ -7,15 +7,33 @@
         mc:Ignorable="d"
         Title="CreationCompteAdmin" Height="450" Width="800">
 
+    <Window.Resources>
+        <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="7" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+
     <Grid>
-        <Rectangle Fill="#181C36" HorizontalAlignment="Left" Height="409" Margin="0,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="798"/>
-        <Rectangle Fill="#2E3349" HorizontalAlignment="Left" Height="41" Stroke="Black" VerticalAlignment="Top" Width="800"/>
-        <Label Content="admin" HorizontalAlignment="Left" Margin="368,72,0,0" VerticalAlignment="Top" Width="166" Height="30"/>
-        <TextBox x:Name="pseudo" Background="#FF2E3349"  HorizontalAlignment="Left" Height="29" Margin="309,123,0,0" Text="pseudo" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" BorderBrush="#FF2E3349"   />
-        <TextBox x:Name="mdp"   Background="#FF2E3349" BorderBrush="#FF2E3349"   HorizontalAlignment="Left" Height="29" Margin="309,192,0,0" Text="mdp" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"  />
-        <Button Name="salut"  Content="création de compte"   Click="Button_Click_Create" HorizontalAlignment="Left" Height="44" Margin="328,285,0,0" VerticalAlignment="Top" Width="144"  BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White"/>
-        <Label Content="chercher nom urgent !!!!" HorizontalAlignment="Left" Margin="347,10,0,0" VerticalAlignment="Top" Width="150" Foreground="White"/>
-        <Button Name="test" BorderBrush="#181C36"  Background="#181C36" Click="retour" Content="retour a la page de connnexion" HorizontalAlignment="Left" Height="29" Margin="616,7,0,0" VerticalAlignment="Top" Width="174" Foreground="White"/>
+        <Rectangle Fill="#2E3349" HorizontalAlignment="Left" Height="420" Stroke="Black" VerticalAlignment="Top" Width="800" Margin="0,0,-6.4,0"/>
+        <Rectangle Fill="#181C36" HorizontalAlignment="Left" Height="369" Margin="29,39,0,0" Stroke="#FF2E3349" VerticalAlignment="Top" Width="740"/>
+        <Label FontFamily="Cooper Black" FontSize="25" Foreground="White" Content="Create admin" HorizontalAlignment="Left" Margin="308,61,0,0" VerticalAlignment="Top" Width="197" Height="40"/>
+        <TextBox x:Name="pseudo" Background="#FF2E3349"  HorizontalAlignment="Left" Height="29" Margin="309,123,0,0" Text="Last Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" BorderBrush="#FF2E3349" Foreground="White"   />
+        <!--  <TextBox x:Name="mdp"   Background="#FF2E3349" BorderBrush="#FF2E3349" Foreground="White"   HorizontalAlignment="Left" Height="29" Margin="309,179,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"  /> -->
+
+        <Button x:Name="salut"  Content="Sign up"   Click="Button_Click_Create" HorizontalAlignment="Left" Height="42" Margin="339,245,0,0" VerticalAlignment="Top" Width="119"  BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White"/>
+        <Button Style="{DynamicResource RoundedButtonStyle}"  x:Name="test" BorderBrush="#181C36"  Background="#181C36" Click="retour" Content="Back to log in" HorizontalAlignment="Left" Height="29" Margin="676,5,0,0" VerticalAlignment="Top" Width="108" Foreground="White"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="309,197,0,0" VerticalAlignment="Top" Width="180" Height="29" Background="#FF2E3349" BorderBrush="#FF2E3349" Foreground="White" x:Name="passwordAdminCreate" />
+        <Label Foreground="White"  Content="Password" HorizontalAlignment="Left" Margin="308,169,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.354,0.469"/>
     </Grid>
 </Window>
 
