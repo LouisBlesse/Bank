@@ -95,5 +95,10 @@ namespace Bank
         {
             MainWindow.GiveToUser(nomClient.Text, Int32.Parse(AmountToAdd.Text));
         }
+
+        private void blockClient(object sender, RoutedEventArgs e)
+        {
+          MainWindow.blockClient( statusClient.IsChecked.Value, nomClient.Text);
+        }
     }
 }

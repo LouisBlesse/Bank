@@ -4,19 +4,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:Bank"
+        ResizeMode="NoResize" 
+ 
+
         mc:Ignorable="d"
         Title="ListUsers" Height="450" Width="800">
-    
+    <Window.Resources>
+        <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="7" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        <Button Click="printUser" Content="Button" HorizontalAlignment="Left" Margin="346,44,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.268,-7.296"/>
+        <Rectangle Fill="#2E3349" HorizontalAlignment="Left" Height="446" Stroke="Black" VerticalAlignment="Top" Width="800" Margin="-2,-26,-4.4,0" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="#181C36" HorizontalAlignment="Left" Height="374" Margin="10,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="770"/>
+
+        <Button BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Click="printUser" Content="Print" HorizontalAlignment="Left" Margin="351,57,0,0" VerticalAlignment="Top" Width="106" RenderTransformOrigin="-1.268,-7.296" Height="27"/>
         <ScrollViewer HorizontalAlignment="Left" Height="292" Margin="36,89,0,0" VerticalAlignment="Top" Width="721" VerticalScrollBarVisibility="Auto">
             <ScrollViewer.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF3F5293" Offset="1"/>
+                    <GradientStop Offset="0"/>
+                    <GradientStop   Offset="1"/>
                 </LinearGradientBrush>
             </ScrollViewer.Background>
             <StackPanel Name="StackUser"   />
         </ScrollViewer>
+        <Button Click="closePage" Style="{DynamicResource RoundedButtonStyle}"  Foreground="#FF1A29C3" Background="#181C36" BorderBrush="#FF2E3349"      Content="Button" HorizontalAlignment="Left" Margin="659,0,0,0" VerticalAlignment="Top" Width="98" Height="28" RenderTransformOrigin="0.631,0.478"/>
+        <Label Content="Users List" HorizontalAlignment="Left"    Margin="328,-7,0,0" VerticalAlignment="Top" Height="31" RenderTransformOrigin="0.724,0.543" Width="143" FontFamily="Cooper Black" FontSize="24" Foreground="White"/>
     </Grid>
 </Window>

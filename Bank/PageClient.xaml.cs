@@ -80,7 +80,7 @@ namespace Bank
 
         public void SeachMoney(object sender, RoutedEventArgs e)
         {
-            ValueIS.Content = "est de :"+MainWindow.GetVAlue(MyUser.id, currencyHigh.SelectedValue.ToString()).ToString();
+            ValueIS.Content = "is of : "+MainWindow.GetVAlue(MyUser.id, currencyHigh.SelectedValue.ToString()).ToString();
         }
         
         public void AddArgent(object sender, RoutedEventArgs e)

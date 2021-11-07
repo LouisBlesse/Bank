@@ -18,7 +18,6 @@ namespace Bank
       InitializeComponent();
       SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
       SQL.Open();
-      
       /*SQLiteCommand command = SQL.CreateCommand();
       command.CommandText = "INSERT INTO admin (identifiant, password) values (\"1111\",\"0000\")";
       command.ExecuteNonQuery();*/
@@ -32,7 +31,6 @@ namespace Bank
       }
       SQL.Close();
     }
-
     private void Button_Click(object sender, RoutedEventArgs e)
     {
       try
@@ -48,8 +46,7 @@ namespace Bank
       }
     }
     
-    
-    public static void Co_Admin(string identifiant, string password)
+    public static bool Co_Admin(string identifiant, string password)
     {
       //Connection de l'admin
       try
@@ -59,8 +56,7 @@ namespace Bank
         
         SQLiteCommand commandSelect = SQL.CreateCommand();
         commandSelect.CommandText = "select * from admin where identifiant='"+ identifiant + "'and  password ='"+ password +"'";
-
-
+        
         SQLiteDataReader reader = commandSelect.ExecuteReader();
         while (reader.Read())
         {
@@ -69,13 +65,16 @@ namespace Bank
         
           PageAdmin p = new PageAdmin(MyAdmin); //New page admin
           p.Show();
+          SQL.Close();
+          return true;
         }
         SQL.Close();
+        return false;
       }
       catch (Exception e)
       {
         MessageBox.Show(e.ToString());
-        throw;
+        return false;
       }
     }
 
@@ -92,7 +91,7 @@ namespace Bank
     }
     
     
-    public static void Co_User(string UserLastName, string pin)
+    public static bool Co_User(string UserLastName, string pin)
     {
       //Connection de l'user
       try
@@ -112,16 +111,19 @@ namespace Bank
             reader["pin"].ToString(),
             reader["main_currency"].ToString(),
             reader["user_try"].ToString());
-        
+                     
           PageClient p = new PageClient(MyUser); //New page admin
           p.Show();
+          SQL.Close();
+          return true;
         }
         SQL.Close();
+        return false;
       }
       catch (Exception e)
       {
         MessageBox.Show(e.ToString());
-        throw;
+        return false;
       }
     }
     
@@ -385,8 +387,15 @@ namespace Bank
       }
       SQL.Close();
     }
+    
+    public static void blockClient(bool block, string last_name) {
+       SQLiteConnection SQL = new SQLiteConnection("Data Source=BDD.db");
+      SQL.Open();
+      SQLiteCommand command = SQL.CreateCommand();
+      command.CommandText = "update client set block=\""+ block +"\" where last_name =\"" + last_name + "\""; 
+      command.ExecuteNonQuery();
+      
+      SQL.Close();
+    }
   }
-  
-  
-
 }

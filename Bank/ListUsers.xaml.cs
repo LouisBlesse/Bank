@@ -14,13 +14,11 @@ namespace Bank
         {
             InitializeComponent();
         }
-
- 
+        
         private void printUser(object sender, RoutedEventArgs e)
         {
             List<User> Users = MainWindow.printAllUser();
-          
-            string test = "";
+            
             for (int i = 0; i < Users.Count; i++)
             {  
                 StackPanel panel = new StackPanel();
@@ -46,6 +44,12 @@ namespace Bank
             box.Margin = new Thickness(10, 10, 10, 10);
 
             return box;
+        }
+
+        private void closePage(object sender, RoutedEventArgs e)
+        {
+            ListUsers listUsers = new ListUsers();
+            listUsers.Close();
         }
     }
 }
