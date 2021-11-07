@@ -28,8 +28,6 @@
         <Rectangle Fill="#181C36" HorizontalAlignment="Left" Height="369" Margin="29,39,0,0" Stroke="#FF2E3349" VerticalAlignment="Top" Width="740"/>
         <Label FontFamily="Cooper Black" FontSize="25" Foreground="White" Content="Create admin" HorizontalAlignment="Left" Margin="308,61,0,0" VerticalAlignment="Top" Width="197" Height="40"/>
         <TextBox x:Name="pseudo" Background="#FF2E3349"  HorizontalAlignment="Left" Height="29" Margin="309,123,0,0" Text="Last Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" BorderBrush="#FF2E3349" Foreground="White"   />
-        <!--  <TextBox x:Name="mdp"   Background="#FF2E3349" BorderBrush="#FF2E3349" Foreground="White"   HorizontalAlignment="Left" Height="29" Margin="309,179,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"  /> -->
-
         <Button x:Name="salut"  Content="Sign up"   Click="Button_Click_Create" HorizontalAlignment="Left" Height="42" Margin="339,245,0,0" VerticalAlignment="Top" Width="119"  BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White"/>
         <Button Style="{DynamicResource RoundedButtonStyle}"  x:Name="test" BorderBrush="#181C36"  Background="#181C36" Click="retour" Content="Back to log in" HorizontalAlignment="Left" Height="29" Margin="676,5,0,0" VerticalAlignment="Top" Width="108" Foreground="White"/>
         <PasswordBox HorizontalAlignment="Left" Margin="309,197,0,0" VerticalAlignment="Top" Width="180" Height="29" Background="#FF2E3349" BorderBrush="#FF2E3349" Foreground="White" x:Name="passwordAdminCreate" />

@@ -16,15 +16,12 @@
         <TextBox  BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" x:Name="AdminName" HorizontalAlignment="Left" Height="40" Margin="135,101,0,0" Text="Last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
         <Label Foreground="White" Content="Admin" HorizontalAlignment="Left" Margin="170,46,0,0" VerticalAlignment="Top" Width="110" FontFamily="Cooper Black" FontSize="25"/>
         <Label Foreground="White" Content="Client" HorizontalAlignment="Left" Margin="518,46,0,0" VerticalAlignment="Top" Width="110" FontFamily="Cooper Black" FontSize="25"/>
-        <!--   <TextBox BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" x:Name="AdminMdp" HorizontalAlignment="Left" Height="40" Margin="135,202,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/> -->
         <TextBox BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" x:Name="UserLastName" HorizontalAlignment="Left" Height="40" Margin="482,101,0,0" Text="Last name" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
-        <!--  <TextBox BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" x:Name="UserMdp" HorizontalAlignment="Left" Height="40" Margin="563,335,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/> -->
         <Button  BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Content="Log in" Click="Button_Click_Admin" HorizontalAlignment="Left" Height="40" Margin="168,245,0,0" VerticalAlignment="Top" Width="112"/>
         <Button BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Content="Log in" Click="Button_Click" HorizontalAlignment="Left" Height="40" Margin="519,245,0,0" VerticalAlignment="Top" Width="109"/>
         <PasswordBox HorizontalAlignment="Left" BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Margin="135,181,0,0" VerticalAlignment="Top" Width="179" Password="" Name="passwordAdmin" Height="40"/>
         <PasswordBox HorizontalAlignment="Left" BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Margin="482,181,0,0" VerticalAlignment="Top" Width="179" Password="" Name="passwordClient" Height="40"/>
         <Label Foreground="White"  Content="Password" HorizontalAlignment="Left" Margin="135,154,0,0" VerticalAlignment="Top" Width="75"/>
         <Label Foreground="White" Content="Pin" HorizontalAlignment="Left" Margin="482,154,0,0" VerticalAlignment="Top" Width="75"/>
-        <!-- <PasswordBox BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" x:Name="AdminMdp" HorizontalAlignment="Left" Height="40" Margin="61,243,0,0" Password="Password"  VerticalAlignment="Top" Width="179"/>  -->
     </Grid>
 </Window>

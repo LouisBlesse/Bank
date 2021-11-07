@@ -27,7 +27,6 @@
     <Grid>
         <Rectangle Fill="#2E3349" HorizontalAlignment="Left" Height="446" Stroke="Black" VerticalAlignment="Top" Width="800" Margin="-2,-26,-4.4,0" Grid.ColumnSpan="2"/>
         <Rectangle Fill="#181C36" HorizontalAlignment="Left" Height="374" Margin="10,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="770"/>
-
         <Button BorderBrush="#FF2E3349" Background="#2E3349"  Foreground="White" Click="printUser" Content="Print" HorizontalAlignment="Left" Margin="351,57,0,0" VerticalAlignment="Top" Width="106" RenderTransformOrigin="-1.268,-7.296" Height="27"/>
         <ScrollViewer HorizontalAlignment="Left" Height="292" Margin="36,89,0,0" VerticalAlignment="Top" Width="721" VerticalScrollBarVisibility="Auto">
             <ScrollViewer.Background>
@@ -38,7 +37,7 @@
             </ScrollViewer.Background>
             <StackPanel Name="StackUser"   />
         </ScrollViewer>
-        <Button Click="closePage" Style="{DynamicResource RoundedButtonStyle}"  Foreground="#FF1A29C3" Background="#181C36" BorderBrush="#FF2E3349"      Content="Button" HorizontalAlignment="Left" Margin="659,0,0,0" VerticalAlignment="Top" Width="98" Height="28" RenderTransformOrigin="0.631,0.478"/>
+        <Button Click="closePage" Style="{DynamicResource RoundedButtonStyle}"  Foreground="#FF1A29C3" Background="#181C36" BorderBrush="#FF2E3349" Content="Back" HorizontalAlignment="Left" Margin="659,0,0,0" VerticalAlignment="Top" Width="98" Height="28" RenderTransformOrigin="0.631,0.478"/>
         <Label Content="Users List" HorizontalAlignment="Left"    Margin="328,-7,0,0" VerticalAlignment="Top" Height="31" RenderTransformOrigin="0.724,0.543" Width="143" FontFamily="Cooper Black" FontSize="24" Foreground="White"/>
     </Grid>
 </Window>
